@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     background-color: #eafaf1; 
     color: #333;
+    line-height: 1.6;
 }
 
 header {
@@ -16,6 +17,7 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
     background-color: #2e7d32; 
 }
@@ -23,9 +25,10 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
-    display: block;
+    padding: 10px 15px; 
     font-weight: bold;
+    text-align: center;
+    flex: 1 1 auto; 
 }
 
 nav a:hover {
@@ -38,32 +41,36 @@ section {
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 15px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin: 20px;
+    margin: 15px;
 }
 
 h1, h2, h3 {
     color: #1b5e20; 
+    margin-bottom: 15px;
 }
 
+
 .carousel-image {
-    max-width: 500px; 
-    max-height: 400px; 
-    margin: 0 auto;/
+    max-width: 100%; 
+    height: auto;
     border-radius: 8px;
     border: 2px solid #4CAF50; 
 }
 
 .carousel .carousel-inner img {
-    margin: 0 auto; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
     padding: 20px;
 }
@@ -92,6 +99,7 @@ h1, h2, h3 {
 #contact ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 #contact ul li {
@@ -102,6 +110,20 @@ footer {
     text-align: center;
     background-color: #2e7d32; 
     color: white;
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header, nav, section, footer {
+        padding: 15px;
+    }
+    .hero {
+        margin: 10px;
+        padding: 20px;
+    }
+    nav a {
+        padding: 8px 10px;
+    }
 }
