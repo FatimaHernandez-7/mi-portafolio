@@ -3,21 +3,21 @@ html {
 }
 
 header {
-  background: #6a994e; 
+  background: #6a994e;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   border: 1px solid #a7c957;
-  padding: 10px 20px; 
-  z-index: 1000; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-  height: calc(100vh - 80px); 
+  height: calc(100vh - 80px);
   width: 200px;
-  background-color: #a7c957; 
+  background-color: #a7c957;
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,7 @@ nav {
   padding-top: 20px;
   z-index: 999;
   box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 nav a {
@@ -35,7 +36,7 @@ nav a {
   padding: 15px 20px;
   display: block;
   transition: background-color 0.3s;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 nav a:hover {
@@ -43,26 +44,27 @@ nav a:hover {
 }
 
 body {
-  text-align: left; 
-  background-color: #f5f5dc; 
-  margin: 0; 
+  text-align: left;
+  background-color: #f5f5dc;
+  margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
 main {
-  width: 70%; 
+  width: 90%;
+  max-width: 800px;
   margin: 90px auto;
-  text-align: left; 
+  text-align: left;
   padding: 20px;
-  background-color: #ffffff; 
-  border-radius: 8px; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  background: #6a994e; 
+  background: #6a994e;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -70,24 +72,56 @@ footer {
   width: 100%;
   text-align: center;
   padding: 10px;
-  border-top: 2px solid #a7c957; 
+  border-top: 2px solid #a7c957;
   color: #ffffff;
   font-size: 14px;
-  line-height: 30px; 
+  line-height: 30px;
 }
 
 .contenedor {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 400px; 
-  margin-top: 20px; 
-  margin-bottom: 20px; 
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .imagen-centrada {
-  height: auto; 
-  border: 2px solid #a7c957; 
+  height: auto;
+  border: 2px solid #a7c957;
   border-radius: 10px;
-  size: 0vmin;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: none;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  main {
+    width: 95%;
+    margin: 100px auto;
+  }
+
+  header {
+    padding: 10px 10px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
