@@ -15,24 +15,20 @@ header {
     text-align: center;
 }
 
-.navbar-brand {
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
     font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    margin-right: 10px;
-}
-
-.navbar-toggler {
-    border-color: #fff;
-}
-
-.navbar-toggler-icon {
-    background-color: #fff;
-    border-radius: 5px;
-}
+    color: white !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #388e3c !important;
+    border-radius: 4px;
+  }  
 
 section {
     padding: 20px;
