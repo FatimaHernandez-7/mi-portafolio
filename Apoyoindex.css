@@ -101,6 +101,27 @@ h1, h2, h3 {
     margin: 10px 0;
 }
 
+.btn-linkedin {
+  background-color: #0A66C2;
+  color: white;
+}
+.btn-facebook {
+  background-color: #1877F2;
+  color: white;
+}
+.btn-instagram {
+  background-color: #E4405F;
+  color: white;
+}
+.btn-twitter {
+  background-color: #1DA1F2;
+  color: white;
+}
+.btn-discord {
+  background-color: #5865F2;
+  color: white;
+}
+
 footer {
     text-align: center;
     background-color: #2e7d32; 
